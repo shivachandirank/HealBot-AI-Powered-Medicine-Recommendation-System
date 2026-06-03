@@ -1,0 +1,19 @@
+{
+  "name": "secureforge-ai",
+  "version": "1.0.0",
+  "description": "AI-Driven Secure Architecture Synthesizer — Convert UML diagrams and requirements into production-ready secure backend architectures",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "cd client && npm run build && cd ../server && npm run build",
+    "start": "cd server && npm start"
+  },
+  "keywords": ["ai", "architecture", "security", "code-generation", "gemini", "uml"],
+  "author": "SecureForge AI",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

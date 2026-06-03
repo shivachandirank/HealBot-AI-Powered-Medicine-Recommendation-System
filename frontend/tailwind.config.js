@@ -1,0 +1,78 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        display: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
+        orbitron: ['Orbitron', 'sans-serif'],
+      },
+      colors: {
+        space:  '#050816',
+        'neon-blue': '#00D4FF',
+        'electric-purple': '#8B5CF6',
+        'emerald-cyber': '#00FF88',
+        forge: {
+          50: '#f0f4ff', 100: '#e0eaff', 200: '#c7d7fe',
+          300: '#a5bcfc', 400: '#8196f8', 500: '#6171f1',
+          600: '#4f52e5', 700: '#4140ca', 800: '#3535a3',
+          900: '#302f81', 950: '#1e1d4c',
+        },
+        cyber: {
+          50: '#f0fdf9', 100: '#ccfbef', 200: '#99f6e0',
+          300: '#5eead4', 400: '#00d4aa', 500: '#00d4aa',
+          600: '#0d9488', 700: '#0f766e', 800: '#115e59',
+          900: '#134e4a', 950: '#042f2e',
+        },
+        neon: { DEFAULT: '#00D4FF', blue: '#00D4FF', purple: '#8B5CF6', green: '#00FF88' },
+        danger: { 400: '#ff6b81', 500: '#ff4757', 600: '#ff2f43' },
+        warn:   { 400: '#ffa94d', 500: '#ffa502', 600: '#f59f00' },
+        success:{ 400: '#69db7c', 500: '#00FF88', 600: '#2ecc71' },
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'neon-gradient': 'linear-gradient(135deg, #00D4FF, #8B5CF6)',
+        'cyber-gradient': 'linear-gradient(135deg, #00FF88, #00D4FF)',
+        'forge-gradient': 'linear-gradient(135deg, #6171f1, #4f52e5)',
+        'grid-cyber': "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' width='40' height='40' fill='none' stroke='rgba(0,212,255,0.04)'%3e%3cpath d='M0 .5H39.5V40'/%3e%3c/svg%3e\")",
+      },
+      animation: {
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float':      'float 6s ease-in-out infinite',
+        'glow':       'glow 2s ease-in-out infinite alternate',
+        'spin-slow':  'spin 12s linear infinite',
+        'spin-med':   'spin 6s linear infinite',
+        'spin-reverse': 'spinReverse 8s linear infinite',
+        'scan':       'scan 2s linear infinite',
+        'radar':      'radar 4s linear infinite',
+        'data-stream':'dataStream 3s ease-in-out infinite',
+        'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+      },
+      keyframes: {
+        float:    { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
+        glow:     { '0%': { boxShadow: '0 0 5px rgba(0,212,255,0.5)' }, '100%': { boxShadow: '0 0 30px rgba(0,212,255,0.9)' } },
+        spinReverse: { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(-360deg)' } },
+        scan:     { '0%': { backgroundPosition: '0% 0%' }, '100%': { backgroundPosition: '0% 100%' } },
+        radar:    { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(360deg)' } },
+        dataStream: { '0%': { transform: 'translateY(-100%)', opacity: '0' }, '50%': { opacity: '1' }, '100%': { transform: 'translateY(100%)', opacity: '0' } },
+        glowPulse: { '0%,100%': { boxShadow: '0 0 20px rgba(0,212,255,0.3)' }, '50%': { boxShadow: '0 0 60px rgba(0,212,255,0.7), 0 0 100px rgba(139,92,246,0.3)' } },
+      },
+      boxShadow: {
+        'neon-blue':    '0 0 30px rgba(0,212,255,0.4)',
+        'neon-purple':  '0 0 30px rgba(139,92,246,0.4)',
+        'neon-green':   '0 0 30px rgba(0,255,136,0.4)',
+        'forge':        '0 0 30px rgba(97,113,241,0.35)',
+        'cyber':        '0 0 30px rgba(0,212,170,0.3)',
+        'card':         '0 8px 32px rgba(0,0,0,0.5)',
+        'glow-sm':      '0 0 10px rgba(0,212,255,0.4)',
+        'glow-lg':      '0 0 40px rgba(0,212,255,0.5)',
+      },
+    },
+  },
+  plugins: [],
+}
