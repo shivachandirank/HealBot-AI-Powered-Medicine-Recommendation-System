@@ -7,7 +7,9 @@ import type {
   ProjectTemplate,
 } from '../types';
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.PROD 
+  ? 'https://secureforge-backend.onrender.com/api' 
+  : '/api';
 
 class ApiError extends Error {
   statusCode: number;
