@@ -7,8 +7,9 @@ import type {
   ProjectTemplate,
 } from '../types';
 
+// Replace the top of api.ts with this:
 const API_BASE = import.meta.env.PROD 
-  ? 'https://secureforge-backend.onrender.com/api' 
+  ? 'https://your-backend-service.up.railway.app/api' // We will update this exact URL after the backend deploys
   : '/api';
 
 class ApiError extends Error {
